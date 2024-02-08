@@ -1,2 +1,3 @@
 # USER STORIES
-I am a Scrum team member, I can design and implement a system to access population information so that the organisation can report on these said population information.
+The organisation want to report on current population information so that the public (or other users) can access this information and asks questions about it.
+The User wants to search and read through the population information so that they can broaden their knowledge and answer personal questions.
