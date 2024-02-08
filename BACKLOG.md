@@ -2,7 +2,7 @@
 By Week 5 we need to:
 - \[ \] **GITHUB PAGE** Create and set-up the github page - Done
 - \[ \] **BACKLOG** Write the to-do list - Done
-- \[ \] **PROJECT BUILD** Build project to a self-contained JAR
+- \[ \] **PROJECT BUILD** Build project to a self-contained JAR - Done
 - \[ \] **DOCKERFILE** Set up dockerfile and make sure it works
 - \[ \] **GITHUG ACTIONS** Project set-up and build is working using JAR, and Docker on GitHub Actions
 - \[ \] **BRANCHES** Create master, develop and release branches on Github page - Done
