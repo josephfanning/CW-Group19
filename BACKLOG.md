@@ -6,6 +6,7 @@ By Week 5 we need to:
 - \[ \] **DOCKERFILE** Set up dockerfile and make sure it works
 - \[ \] **GITHUG ACTIONS** Project set-up and build is working using JAR, and Docker on GitHub Actions
 - \[ \] **BRANCHES** Create master, develop and release branches on Github page - Done
+- \[ \] **USER STORIES** Create a user story that relates to the coursework - Done
 - \[ \] **RELEASE** Create first release
 - \[ \] **CODE OF CONDUCT** Create our group rules, regulations and responsibilities
 - \[ \] **TASKS** Give tasks to each group member
