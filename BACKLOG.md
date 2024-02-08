@@ -11,3 +11,4 @@ By Week 5 we need to:
 - \[ \] **CODE OF CONDUCT -** Create our group rules, regulations and responsibilities - Dan
 - \[ \] **TASKS -** Give tasks to each group member - Done
 - \[ \] **CASE DIAGRAM -** Create and use case diagram - Callum
+- \[ \] **GITHUB ISSUES -** - Callum 
