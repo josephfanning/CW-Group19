@@ -1,5 +1,6 @@
 # Product Backlog
 By Week 5 we need to:
+- \[ \] **Make the readme file -**
 - \[ \] **GITHUB PAGE -** Create and set-up the github page - Done
 - \[ \] **BACKLOG -** Write the to-do list - Done
 - \[ \] **PROJECT BUILD -** Build project to a self-contained JAR - Done
