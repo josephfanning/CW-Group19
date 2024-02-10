@@ -1,3 +1,5 @@
-basic readme file (using this currently to test CI workflow) - JF
+<h1>Group 19 Coursework</h1>
 
-Testing **Continous Intergration workflow**.
+Testing **build badges**
+
+![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/josephfanning/CW-Group19/main.yml.yml?branch=master)
