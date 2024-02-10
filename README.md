@@ -2,4 +2,4 @@
 
 Testing **build badges**
 
-![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/josephfanning/CW-Group19/main.yml.yml?branch=master)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/josephfanning/CW-Group19/main.yml?branch=master)
