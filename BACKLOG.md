@@ -1,15 +1,15 @@
 # Product Backlog
 By Week 5 we need to:
 - \[ \] **Make the readme file -**
-- \[ \] **GITHUB PAGE -** Create and set-up the github page - Done
-- \[ \] **BACKLOG -** Write the to-do list - Done
-- \[ \] **PROJECT BUILD -** Build project to a self-contained JAR - Done
-- \[ \] **DOCKERFILE -** Set up dockerfile and make sure it works - Done
-- \[ \] **GITHUB ACTIONS -** Project set-up and build is working using JAR, and Docker on GitHub Actions - Done
-- \[ \] **BRANCHES -** Create master, develop and release branches on Github page - Done(Double Check)
-- \[ \] **USER STORIES -** Create a user story that relates to the coursework - Done
+- \[ \] **GITHUB PAGE -** ~~Create and set-up the github page~~
+- \[ \] **BACKLOG -** ~~Write the to-do list~~
+- \[ \] **PROJECT BUILD -** ~~Build project to a self-contained JAR~~
+- \[ \] **DOCKERFILE -** ~~Set up dockerfile and make sure it works~~
+- \[ \] **GITHUB ACTIONS -** ~~Project set-up and build is working using JAR, and Docker on GitHub Actions~~
+- \[ \] **BRANCHES -** ~~Create master, develop and release branches on Github page~~ (DOUBLE CHECK)
+- \[ \] **USER STORIES -** ~~Create a user story that relates to the coursework~~
 - \[ \] **RELEASE -** Create first release - Joseph
-- \[ \] **CODE OF CONDUCT -** Create our group rules, regulations and responsibilities - Dan
-- \[ \] **TASKS -** Give tasks to each group member - Done
+- \[ \] **CODE OF CONDUCT -** ~~Create our group rules, regulations and responsibilities~~
+- \[ \] **TASKS -** ~~Give tasks to each group member~~
 - \[ \] **CASE DIAGRAM -** Create and use case diagram - Callum
 - \[ \] **GITHUB ISSUES -** - Callum 
