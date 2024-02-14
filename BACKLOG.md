@@ -12,4 +12,5 @@ By Week 5 we need to:
 - \[ \] **CODE OF CONDUCT -** ~~Create our group rules, regulations and responsibilities~~
 - \[ \] **TASKS -** ~~Give tasks to each group member~~
 - \[ \] **CASE DIAGRAM -** Create and use case diagram - Callum
-- \[ \] **GITHUB ISSUES -** - Callum 
+- \[ \] **GITHUB ISSUES -** ~~Use github issues~~
+- \[ \] **CHANGE NAMES -** Change names in master and develop branches workflow (main.yml). Change name to 'A workflow for group 19 coursework'
