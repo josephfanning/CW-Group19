@@ -1,0 +1,37 @@
+USE CASE:
+
+Search Population
+ 
+
+Goal in context: As a user i want to search and read through the population information so I 
+			can broaden my knowledge and answer personal questions.
+
+Scope: system
+
+Level: Primary Task
+
+Preconditions: Database contains population data of Countries 
+
+Success End Condition: results from user search are displayed
+
+Failed End condition: results are not displayed or displayed incorrectly due to errors 
+
+Primary Actor: User 
+
+Trigger: a user requesting population data  
+
+Main Success Scenario:
+1. User requests population data with certain parameters
+2. system retrevies population data 
+3. system displays the requested data 
+
+Extensions:
+2. system cannot retrieve population data 
+
+Sub-Variations:
+none
+
+SCHEDULE
+DUE DATE: TBC 
+
+
