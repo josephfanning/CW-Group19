@@ -14,3 +14,4 @@ By Week 5 we need to:
 - \[ \] **CASE DIAGRAM -** ~~Create and use case diagram~~
 - \[ \] **GITHUB ISSUES -** ~~Use github issues~~
 - \[ \] **CHANGE NAMES -** Make sure master is on the same level as develop and possibly the feature branches.
+- \[ \] **EXPAND BACKLOG -** Create the backlog so it includes a list of tasks to do for the entire coursework.
