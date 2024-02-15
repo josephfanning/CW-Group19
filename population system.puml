@@ -1,0 +1,19 @@
+@startuml
+
+actor user as "user"
+
+rectangle Database
+
+rectangle "population system" {
+    usecase UC1 as "Search population
+    database"
+
+    usecase UC2 as "display results"
+
+    user - UC1
+    UC1 ..> UC2 : include
+    UC1 - Database
+}
+
+@enduml
+
