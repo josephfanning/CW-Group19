@@ -11,6 +11,6 @@ By Week 5 we need to:
 - \[ \] **RELEASE -** ~~Create first release~~
 - \[ \] **CODE OF CONDUCT -** ~~Create our group rules, regulations and responsibilities~~
 - \[ \] **TASKS -** ~~Give tasks to each group member~~
-- \[ \] **CASE DIAGRAM -** Create and use case diagram - Callum
+- \[ \] **CASE DIAGRAM -** ~~Create and use case diagram~~
 - \[ \] **GITHUB ISSUES -** ~~Use github issues~~
 - \[ \] **CHANGE NAMES -** Make sure master is on the same level as develop and possibly the feature branches.
