@@ -26,5 +26,6 @@ jobs:
         run: docker run --network se-methods --name semcontainer se_methods
       - name: view logs
         run: docker logs semcontainer
+        # allows docker-compose file to be run
       - name: Run docker compose
         run: docker-compose up --abort-on-container-exit
