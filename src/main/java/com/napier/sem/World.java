@@ -8,10 +8,12 @@ public class World {
     // init Name
     public String Name;
 
-
+    // init CountryCode
     public String CountryCode;
 
+    // init District
     public String District;
 
+    // init population
     public int Populaion;
 }
