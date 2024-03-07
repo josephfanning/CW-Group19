@@ -23,3 +23,9 @@ By Week 5 we need to:
 - \[ \] **SQL STATEMENTS -** Start to implement the first SQL statements of the project. - Callum
 - \[ \] **LINK -** Make sure all project members are linked to the github through IntelliJ. - Everyone
 - \[ \] **COMMENTS -** Make sure all code is commented correctly.
+- \[ \] **INTEGRATION TESTS -** Define suitable integrations tests.
+- \[ \] **DEPLOYMENT -** Deployment should be created and running.
+- \[ \] **BUG REPORTING -** Bug reporting system should be set-up.
+- \[ \] **SQL -** SQL Statements should be finished and tested.
+- \[ \] **OVERALL TEST -** Go through every aspect of the project and double check everything is up to date and working.
+- \[ \] **FINAL SUBMISSION -** Once all other tasks are complete, submit final project.
