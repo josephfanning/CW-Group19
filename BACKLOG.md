@@ -16,8 +16,8 @@ By Week 5 we need to:
 - \[ \] **CHANGE NAMES -** ~~Make sure master is on the same level as develop and possibly the feature branches.~~
 - \[ \] **EXPAND BACKLOG -** ~~Create the backlog so it includes a list of tasks to do for the entire coursework.~~
 - \[ \] **ZUBE.IO INTEGRATE -** ~~Integrate our project with Zube.io.~~
-- \[ \] **START USE OF KANBAN -** Start using the Kanban Project Boards. - Dan
-- \[ \] **SPRINT BOARDS -** Start using the Sprint Boards. - Dan
+- \[ \] **START USE OF KANBAN -** ~~Start using the Kanban Project Boards.~~
+- \[ \] **SPRINT BOARDS -** ~~Start using the Sprint Boards.~~
 - \[ \] **UNIT TESTS -** Define suitable unit tests. - Joseph
 - \[ \] **TESTS ON ACTIONS -** Tests should be runnig with Github actions. - Joseph
 - \[ \] **SQL STATEMENTS -** Start to implement the first SQL statements of the project. - Callum
