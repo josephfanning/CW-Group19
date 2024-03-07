@@ -19,7 +19,7 @@ By Week 5 we need to:
 - \[ \] **START USE OF KANBAN -** Start using the Kanban Project Boards. - Dan
 - \[ \] **SPRINT BOARDS -** Start using the Sprint Boards. - Dan
 - \[ \] **UNIT TESTS -** Define suitable unit tests. - Joseph
-- \[ \] **TESTS ON ACTIONS -** Tests should be runnig with Github actions.
-- \[ \] **SQL STATEMENTS -** Start to implement the first SQL statements of the project.
-- \[ \] **LINK -** Make sure all project members are linked to the github through IntelliJ.
+- \[ \] **TESTS ON ACTIONS -** Tests should be runnig with Github actions. - Joseph
+- \[ \] **SQL STATEMENTS -** Start to implement the first SQL statements of the project. - Callum
+- \[ \] **LINK -** Make sure all project members are linked to the github through IntelliJ. - Everyone
 - \[ \] **COMMENTS -** Make sure all code is commented correctly.
