@@ -32,6 +32,9 @@ public class App
         {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // uses the executeQuery1() function to try to get a query from the database
+            executeQuery1();
         }
         catch (ClassNotFoundException e)
         {
@@ -83,10 +86,10 @@ public class App
         }
     }
 
-    public void executeQuery() {
+    public void executeQuery1() {
         // Check if the connection is established
         if (con == null) {
-            System.out.println("Database connection not established");
+            System.out.println("Database connection not established. Please try again.");
             return;
         }
 
