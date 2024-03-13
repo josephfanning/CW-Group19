@@ -4,6 +4,7 @@ import java.sql.*;
 
 public class App
 {
+    /** creates an instance of app and calls the connect and disconnect function on it*/
     public static void main(String[] args)
     {
         // Create new Application
