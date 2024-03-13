@@ -82,4 +82,40 @@ public class App
             }
         }
     }
+
+    public void executeQuery() {
+        // Check if the connection is established
+        if (con == null) {
+            System.out.println("Database connection not established");
+            return;
+        }
+
+        try {
+            // Create a statement object
+            Statement stmt = con.createStatement();
+
+            // Define your SQL query
+            String query = "SELECT Name, Population FROM world.sql ORDER BY population DESC LIMIT 4";
+
+            // Execute the query
+            ResultSet rs = stmt.executeQuery(query);
+
+            // Process the result set
+            while (rs.next()) {
+                // Access the columns of the current row
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                // Do something with the retrieved data
+                System.out.println("ID: " + id + ", Name: " + name);
+            }
+
+            // Close the result set and statement
+            rs.close();
+            stmt.close();
+        } catch (SQLException e) {
+            System.out.println("Error executing SQL query: " + e.getMessage());
+        }
+    }
 }
+
+
