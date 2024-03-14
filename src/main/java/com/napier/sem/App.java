@@ -13,6 +13,9 @@ public class App
         // Connect to database
         a.connect();
 
+        // uses the executeQuery1() function to try to get a query from the database
+        a.executeQuery1();
+
         // Disconnect from database
         a.disconnect();
 
@@ -32,9 +35,6 @@ public class App
         {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-
-            // uses the executeQuery1() function to try to get a query from the database
-            executeQuery1();
         }
         catch (ClassNotFoundException e)
         {
@@ -42,7 +42,7 @@ public class App
             System.exit(-1);
         }
 
-        int retries = 10;
+        int retries = 100;
         for (int i = 0; i < retries; ++i)
         {
             System.out.println("Connecting to database...");
@@ -51,7 +51,7 @@ public class App
                 // Wait a bit for db to start
                 Thread.sleep(5000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/employees?useSSL=false", "root", "example");
+                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             }
@@ -98,7 +98,7 @@ public class App
             Statement stmt = con.createStatement();
 
             // Define your SQL query
-            String query = "SELECT Name, Population FROM world.sql ORDER BY population DESC LIMIT 4";
+            String query = "SELECT Name, Population FROM world ORDER BY population DESC LIMIT 4";
 
             // Execute the query
             ResultSet rs = stmt.executeQuery(query);
