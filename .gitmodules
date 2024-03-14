@@ -1,3 +1,3 @@
-[submodule "db/test_db"]
-	path = db/test_db
-	url = https://github.com/datacharmer/test_db
+[submodule "db/world_db"]
+	path = db/world_db
+	url = https://github.com/josephfanning/CW-Group19/tree/master/db/world-db/world.sql
