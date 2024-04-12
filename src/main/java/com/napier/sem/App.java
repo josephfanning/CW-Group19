@@ -17,6 +17,9 @@ public class App
         // Print print 1st query report
         a.executeQuery1();
 
+        World cty = a.getCity(64); // not working error codes: //Unknown column 'ID' in 'field list'
+                                                                  //Failed to get employee details
+
         // Disconnect from database
         a.disconnect();
     }
@@ -85,6 +88,56 @@ public class App
         }
     }
 
+    public World getCity(int ID)
+    {
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT ID, Name, CountryCode, District, Population"
+                            + "FROM city "
+                            + "WHERE ID = " + ID;
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            if (rset.next())
+            {
+                World cty = new World();
+                cty.ID = rset.getInt("ID");
+                cty.Name = rset.getString("Name");
+                cty.CountryCode = rset.getString("CountryCode");
+                cty.District = rset.getString("District");
+                cty.Population = rset.getInt("Population");
+                return cty;
+            }
+            else
+                return null;
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get employee details");
+            return null;
+        }
+    }
+
+    public void displayCity(World cty)
+    {
+        if (cty != null)
+        {
+            System.out.println(
+                    cty.ID + " "
+                            + cty.ID + " "
+                            + cty.Name + "\n"
+                            + cty.CountryCode + "\n"
+                            + "Salary:" + cty.District + "\n"
+                            + cty.Population + "\n");
+        }
+    }
+
     public void executeQuery1() {
         // Check if the connection is established
         if (con == null) {
@@ -97,7 +150,7 @@ public class App
             Statement stmt = con.createStatement();
 
             // Define your SQL query
-            String query = "SELECT Name, Population FROM world ORDER BY population DESC LIMIT 4";
+            String query = "SELECT Name, Population FROM city ORDER BY population DESC LIMIT 4";
 
             // Execute the query
             ResultSet rs = stmt.executeQuery(query);
@@ -105,10 +158,10 @@ public class App
             // Process the result set
             while (rs.next()) {
                 // Access the columns of the current row
-                int id = rs.getInt("id");
+                //int id = rs.getInt("id");
                 String name = rs.getString("name");
                 // Do something with the retrieved data
-                System.out.println("ID: " + id + ", Name: " + name);
+                System.out.println("Name: " + name + ", Population: " + rs.getInt("population"));
             }
 
             // Close the result set and statement
