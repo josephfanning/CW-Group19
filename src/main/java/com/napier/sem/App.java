@@ -16,7 +16,9 @@ public class App
         }
 
         // basic getCity function
-        World cty = a.getCity(64); // not working error codes: //Unknown column 'ID' in 'field list'
+        World cty = a.getCity(373); // not working error codes: //Unknown column 'ID' in 'field list'
+        System.out.println("Retrieved city: " + cty); // serious issues with this!?!?
+                                                      // comes up with: Retrieved city: com.napier.sem.World@1786dec2
 
         // Print print 1st query report
         a.executeQuery1();
@@ -99,9 +101,10 @@ public class App
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "SELECT ID, Name, CountryCode, District, Population"
+                    "SELECT ID, Name, CountryCode, District, Population "
                             + "FROM city "
                             + "WHERE ID = " + id;
+
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
             // Return new employee if valid.
