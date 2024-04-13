@@ -14,11 +14,13 @@ public class App
         } else {
             a.connect(args[0], Integer.parseInt(args[1]));
         }
+
+        // basic getCity function
+        World cty = a.getCity(64); // not working error codes: //Unknown column 'ID' in 'field list'
+
         // Print print 1st query report
         a.executeQuery1();
-
-        World cty = a.getCity(64); // not working error codes: //Unknown column 'ID' in 'field list'
-                                                                  //Failed to get employee details
+         //Failed to get employee details
 
         // Disconnect from database
         a.disconnect();
@@ -88,7 +90,8 @@ public class App
         }
     }
 
-    public World getCity(int ID)
+    // testing function from lab3 to get a city and all its details
+    public World getCity(int id)
     {
         try
         {
@@ -98,7 +101,7 @@ public class App
             String strSelect =
                     "SELECT ID, Name, CountryCode, District, Population"
                             + "FROM city "
-                            + "WHERE ID = " + ID;
+                            + "WHERE ID = " + id;
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
             // Return new employee if valid.
@@ -119,7 +122,7 @@ public class App
         catch (Exception e)
         {
             System.out.println(e.getMessage());
-            System.out.println("Failed to get employee details");
+            System.out.println("Failed to get World details");
             return null;
         }
     }
@@ -133,7 +136,7 @@ public class App
                             + cty.ID + " "
                             + cty.Name + "\n"
                             + cty.CountryCode + "\n"
-                            + "Salary:" + cty.District + "\n"
+                            + "District:" + cty.District + "\n"
                             + cty.Population + "\n");
         }
     }
@@ -150,7 +153,7 @@ public class App
             Statement stmt = con.createStatement();
 
             // Define your SQL query
-            String query = "SELECT Name, Population FROM city ORDER BY population DESC LIMIT 4";
+            String query = "SELECT ID, Name, Population FROM city ORDER BY population DESC LIMIT 4";
 
             // Execute the query
             ResultSet rs = stmt.executeQuery(query);
@@ -161,7 +164,7 @@ public class App
                 //int id = rs.getInt("id");
                 String name = rs.getString("name");
                 // Do something with the retrieved data
-                System.out.println("Name: " + name + ", Population: " + rs.getInt("population"));
+                System.out.println("ID: " + rs.getInt("ID") + ", Name: " + name + ", Population: " + rs.getInt("population"));
             }
 
             // Close the result set and statement
