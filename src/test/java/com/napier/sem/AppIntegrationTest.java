@@ -21,12 +21,40 @@ public class AppIntegrationTest
     }
 
     @Test
-    void testGetEmployee()
+    void testGetName()
     {
-        World cty = app.getCity(113);
-        assertEquals("San Fernando del Valle de Cata", cty.Name);
-        assertEquals("ARG", cty.CountryCode);
-        assertEquals(134935, cty.Population);
+        World test1 = app.getCity(113);
+        assertEquals("San Fernando del Valle de Cata", test1.Name);
+    }
 
+    @Test
+    void testGetCountryCode()
+    {
+        World testGetCountryCode = app.getCity(1);
+        assertEquals("AFG", testGetCountryCode.CountryCode);
+    }
+
+    @Test
+    void testGetPopulation()
+    {
+        World testGetPopulation = app.getCity(71);
+        assertEquals(1157507, testGetPopulation.Population);
+    }
+
+    @Test
+    void testGetDistrict()
+    {
+        World testGetDistrict = app.getCity(871);
+        assertEquals("Southern Mindanao", testGetDistrict.District);
+    }
+
+    @Test
+    void testGetAllInfo()
+    {
+        World testGetAllInfo = app.getCity(1052);
+        assertEquals("Vishakhapatnam", testGetAllInfo.Name);
+        assertEquals("IND", testGetAllInfo.CountryCode);
+        assertEquals("Andhra Pradesh", testGetAllInfo.District);
+        assertEquals(752037, testGetAllInfo.Population);
     }
 }
