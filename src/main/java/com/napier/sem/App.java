@@ -15,13 +15,15 @@ public class App
             a.connect(args[0], Integer.parseInt(args[1]));
         }
 
-        // basic getCity function
-        World cty = a.getCity(373); // not working error codes: //Unknown column 'ID' in 'field list'
-        System.out.println("Retrieved city: " + cty); // serious issues with this!?!?
-                                                      // comes up with: Retrieved city: com.napier.sem.World@1786dec2
+
+        // getCity function that takes in the cities ID as a parameter and returns all the data
+        World cty = a.getCity(373);
+
+        // Display results of getCity function using the displayCity function
+        a.displayCity(cty);
 
         // Print print 1st query report
-        a.executeQuery1();
+        a.query1();
          //Failed to get employee details
 
         // Disconnect from database
@@ -111,6 +113,8 @@ public class App
             // Check one is returned
             if (rset.next())
             {
+                // uses getString function to get all the information form the different parts of the SQL statement
+                // basically sets all the values from World.swl to the variables alrerdy created in World.java
                 World cty = new World();
                 cty.ID = rset.getInt("ID");
                 cty.Name = rset.getString("Name");
@@ -122,7 +126,7 @@ public class App
             else
                 return null;
         }
-        catch (Exception e)
+        catch (Exception e) // if the database cannot be located or has issues accessing it
         {
             System.out.println(e.getMessage());
             System.out.println("Failed to get World details");
@@ -130,11 +134,11 @@ public class App
         }
     }
 
-    public void displayCity(World cty)
+    public void displayCity(World cty) // method to display
     {
         if (cty != null)
         {
-            System.out.println(
+            System.out.println( // prints out all the variables from a particular city
                     cty.ID + " "
                             + cty.ID + " "
                             + cty.Name + "\n"
@@ -144,7 +148,7 @@ public class App
         }
     }
 
-    public void executeQuery1() {
+    public void query1() { //
         // Check if the connection is established
         if (con == null) {
             System.out.println("Database connection not established. Please try again.");
