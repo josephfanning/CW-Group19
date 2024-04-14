@@ -21,11 +21,11 @@ public class AppIntegrationTest
     }
 
     @Test
-    void testGetCity()
+    void testGetEmployee()
     {
-
-
-
-
+        World cty = app.getCity(113);
+        assertEquals(cty.CountryCode, 134935);
+        assertEquals(cty.Name, "San Fernando del Valle de Cata");
+        assertEquals(cty.CountryCode, "ARG");
     }
 }

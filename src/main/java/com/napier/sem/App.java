@@ -159,7 +159,7 @@ public class App
             // Create a statement object
             Statement stmt = con.createStatement();
 
-            // Define your SQL query
+            // defines the SQL query
             String query = "SELECT ID, Name, Population FROM city ORDER BY population DESC LIMIT 4";
 
             // Execute the query
@@ -177,7 +177,7 @@ public class App
             // Close the result set and statement
             rs.close();
             stmt.close();
-        } catch (SQLException e) {
+        } catch (SQLException e) { // catches the program if there are any errors
             System.out.println("Error executing SQL query: " + e.getMessage());
         }
     }
