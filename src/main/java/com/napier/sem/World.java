@@ -15,5 +15,6 @@ public class World {
     public String District;
 
     // init population
-    public int Populaion;
+    public int Population;
+
 }

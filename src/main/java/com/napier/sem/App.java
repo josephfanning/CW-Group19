@@ -5,20 +5,29 @@ import java.sql.*;
 public class App
 {
     /** creates an instance of app and calls the connect and disconnect function on it*/
-    public static void main(String[] args)
-    {
-        // Create new Application
+    public static void main(String[] args) {
+        // Create new Application and connect to database
         App a = new App();
 
-        // Connect to database
-        a.connect();
+        if (args.length < 1) {
+            a.connect("localhost:33060", 10000);
+        } else {
+            a.connect(args[0], Integer.parseInt(args[1]));
+        }
 
-        // uses the executeQuery1() function to try to get a query from the database
-        a.executeQuery1();
+
+        // getCity function that takes in the cities ID as a parameter and returns all the data
+        World cty = a.getCity(373);
+
+        // Display results of getCity function using the displayCity function
+        a.displayCity(cty);
+
+        // Print print 1st query report
+        a.query1();
+         //Failed to get employee details
 
         // Disconnect from database
         a.disconnect();
-
     }
 
     /**
@@ -29,39 +38,38 @@ public class App
     /**
      * Connect to the MySQL database.
      */
-    public void connect()
-    {
-        try
-        {
+    public void connect(String location, int delay) {
+        try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-        }
-        catch (ClassNotFoundException e)
-        {
+        } catch (ClassNotFoundException e) {
             System.out.println("Could not load SQL driver");
             System.exit(-1);
         }
 
-        int retries = 100;
-        for (int i = 0; i < retries; ++i)
-        {
+        int retries = 10;
+        boolean shouldWait = false;
+        for (int i = 0; i < retries; ++i) {
             System.out.println("Connecting to database...");
-            try
-            {
-                // Wait a bit for db to start
-                Thread.sleep(5000);
+            try {
+                if (shouldWait) {
+                    // Wait a bit for db to start
+                    Thread.sleep(delay);
+                }
+
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
+                con = DriverManager.getConnection("jdbc:mysql://" + location
+                                + "/world?allowPublicKeyRetrieval=true&useSSL=false",
+                        "root", "example");
                 System.out.println("Successfully connected");
                 break;
-            }
-            catch (SQLException sqle)
-            {
-                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
+            } catch (SQLException sqle) {
+                System.out.println("Failed to connect to database attempt " + i);
                 System.out.println(sqle.getMessage());
-            }
-            catch (InterruptedException ie)
-            {
+
+                // Let's wait before attempting to reconnect
+                shouldWait = true;
+            } catch (InterruptedException ie) {
                 System.out.println("Thread interrupted? Should not happen.");
             }
         }
@@ -86,7 +94,61 @@ public class App
         }
     }
 
-    public void executeQuery1() {
+    // testing function from lab3 to get a city and all its details
+    public World getCity(int id)
+    {
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT ID, Name, CountryCode, District, Population "
+                            + "FROM city "
+                            + "WHERE ID = " + id;
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            if (rset.next())
+            {
+                // uses getString function to get all the information form the different parts of the SQL statement
+                // basically sets all the values from World.swl to the variables alrerdy created in World.java
+                World cty = new World();
+                cty.ID = rset.getInt("ID");
+                cty.Name = rset.getString("Name");
+                cty.CountryCode = rset.getString("CountryCode");
+                cty.District = rset.getString("District");
+                cty.Population = rset.getInt("Population");
+                return cty;
+            }
+            else
+                return null;
+        }
+        catch (Exception e) // if the database cannot be located or has issues accessing it
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get World details");
+            return null;
+        }
+    }
+
+    public void displayCity(World cty) // method to display
+    {
+        if (cty != null)
+        {
+            System.out.println( // prints out all the variables from a particular city
+                    cty.ID + " "
+                            + cty.ID + " "
+                            + cty.Name + "\n"
+                            + cty.CountryCode + "\n"
+                            + "District:" + cty.District + "\n"
+                            + cty.Population + "\n");
+        }
+    }
+
+    public void query1() { //
         // Check if the connection is established
         if (con == null) {
             System.out.println("Database connection not established. Please try again.");
@@ -97,8 +159,8 @@ public class App
             // Create a statement object
             Statement stmt = con.createStatement();
 
-            // Define your SQL query
-            String query = "SELECT Name, Population FROM world ORDER BY population DESC LIMIT 4";
+            // defines the SQL query
+            String query = "SELECT ID, Name, Population FROM city ORDER BY population DESC LIMIT 4";
 
             // Execute the query
             ResultSet rs = stmt.executeQuery(query);
@@ -106,16 +168,16 @@ public class App
             // Process the result set
             while (rs.next()) {
                 // Access the columns of the current row
-                int id = rs.getInt("id");
+                //int id = rs.getInt("id");
                 String name = rs.getString("name");
                 // Do something with the retrieved data
-                System.out.println("ID: " + id + ", Name: " + name);
+                System.out.println("ID: " + rs.getInt("ID") + ", Name: " + name + ", Population: " + rs.getInt("population"));
             }
 
             // Close the result set and statement
             rs.close();
             stmt.close();
-        } catch (SQLException e) {
+        } catch (SQLException e) { // catches the program if there are any errors
             System.out.println("Error executing SQL query: " + e.getMessage());
         }
     }
