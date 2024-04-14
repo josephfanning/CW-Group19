@@ -10,10 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class AppIntegrationTest
 {
-    static App app;
+    static App app; // creates an insatance
 
     @BeforeAll
-    static void init()
+    static void init() // initialisation method to get the file to connect to the database
     {
         app = new App();
         app.connect("localhost:33060", 30000);
@@ -21,35 +21,35 @@ public class AppIntegrationTest
     }
 
     @Test
-    void testGetName()
+    void testGetName() // basic test to get the cities name from the database
     {
         World test1 = app.getCity(113);
         assertEquals("San Fernando del Valle de Cata", test1.Name);
     }
 
     @Test
-    void testGetCountryCode()
+    void testGetCountryCode() // basic test to get the cities CountryCode from the database
     {
         World testGetCountryCode = app.getCity(1);
         assertEquals("AFG", testGetCountryCode.CountryCode);
     }
 
     @Test
-    void testGetPopulation()
+    void testGetPopulation() // basic test to get the cities Population from the database
     {
         World testGetPopulation = app.getCity(71);
         assertEquals(1157507, testGetPopulation.Population);
     }
 
     @Test
-    void testGetDistrict()
+    void testGetDistrict() // basid code to get the District from the database
     {
         World testGetDistrict = app.getCity(871);
         assertEquals("Southern Mindanao", testGetDistrict.District);
     }
 
     @Test
-    void testGetAllInfo()
+    void testGetAllInfo() // basic code to get all information from a city from the database
     {
         World testGetAllInfo = app.getCity(1052);
         assertEquals("Vishakhapatnam", testGetAllInfo.Name);
