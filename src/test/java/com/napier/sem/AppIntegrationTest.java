@@ -21,7 +21,7 @@ public class AppIntegrationTest
     void testGetName() // basic test to get the cities name from the database
     {
         World test1 = app.getCity(113);
-        assertEquals("San Fernando del Valle de Cata", test1.CityName);
+        assertEquals("San Fernando del Valle de Cata", test1.Name);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class AppIntegrationTest
     void testGetPopulation() // basic test to get the cities Population from the database
     {
         World testGetPopulation = app.getCity(71);
-        assertEquals(1157507, testGetPopulation.CityPopulation);
+        assertEquals(1157507, testGetPopulation.Population);
     }
 
     @Test
@@ -49,10 +49,10 @@ public class AppIntegrationTest
     void testGetAllCityInfo() // basic code to get all information from a city from the database
     {
         World testGetAllInfo = app.getCity(1052);
-        assertEquals("Vishakhapatnam", testGetAllInfo.CityName);
+        assertEquals("Vishakhapatnam", testGetAllInfo.Name);
         assertEquals("IND", testGetAllInfo.CountryCode);
         assertEquals("Andhra Pradesh", testGetAllInfo.District);
-        assertEquals(752037, testGetAllInfo.CityPopulation);
+        assertEquals(752037, testGetAllInfo.Population);
     }
 
 

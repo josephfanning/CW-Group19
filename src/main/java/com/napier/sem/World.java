@@ -7,7 +7,7 @@ public class World {
     public int ID;
 
     // init Name
-    public String CityName;
+    public String Name;
 
     // init CountryCode
     public String CountryCode;
@@ -16,13 +16,11 @@ public class World {
     public String District;
 
     // init population
-    public int CityPopulation;
+    public int Population;
 
             // country stuff
 
     public String Code;
-
-    public String CountryName;
 
     public String Continent;
 

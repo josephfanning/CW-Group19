@@ -20,6 +20,9 @@ public class App
         // Display results of getCity function using the displayCity function
         a.displayCity(cty);
 
+        World country = a.getCountry("BLR");
+        a.displayCountry(country);
+
         // Disconnect from database
         a.disconnect();
     }
@@ -111,10 +114,10 @@ public class App
                 // basically sets all the values from World.swl to the variables alrerdy created in World.java
                 World cty = new World();
                 cty.ID = rset.getInt("ID");
-                cty.CityName = rset.getString("Name");
+                cty.Name = rset.getString("Name");
                 cty.CountryCode = rset.getString("CountryCode");
                 cty.District = rset.getString("District");
-                cty.CityPopulation = rset.getInt("Population");
+                cty.Population = rset.getInt("Population");
                 return cty;
             }
             else
@@ -134,13 +137,70 @@ public class App
         {
             System.out.println( // prints out all the variables from a particular city
                     cty.ID + " "
-                            + cty.ID + " "
-                            + cty.CityName + "\n"
-                            + cty.CountryCode + "\n"
+                            + "ID: " + cty.ID + " "
+                            + "Name: " + cty.Name + "\n"
+                            + "Country Code: " + cty.CountryCode + "\n"
                             + "District:" + cty.District + "\n"
-                            + cty.CityPopulation + "\n");
+                            + "Population: " + cty.Population + "\n");
         }
     }
+
+    public World getCountry(String Code)
+    {
+        try
+        {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT Code, Name, Continent, Region, Population, Capital "
+                            + "FROM country "
+                            + "WHERE Code = '" + Code + "'";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+            // Return new employee if valid.
+            // Check one is returned
+            if (rset.next())
+            {
+                // uses getString function to get all the information form the different parts of the SQL statement
+                // basically sets all the values from World.sql to the variables already created in World.java
+                World country = new World();
+                country.Code = rset.getString("Code");
+                country.Name = rset.getString("Name");
+                country.Continent = rset.getString("Continent");
+                country.Region = rset.getString("Region");
+                country.Population = rset.getInt("Population");
+                country.Capital = rset.getInt("Capital");
+                return country;
+            }
+            else
+                return null;
+        }
+        catch (Exception e) // if the database cannot be located or has issues accessing it
+        {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get World details");
+            return null;
+        }
+    }
+
+    public void displayCountry(World country)
+    {
+        if (country != null)
+        {
+            System.out.println( // prints out all the variables from a particular city
+                    country.ID + " "
+                            + "Code: " + country.Code + " "
+                            + "Name: " + country.Name + "\n"
+                            + "Continent: " + country.Continent + "\n"
+                            + "Region:" + country.Region + "\n"
+                            + "Population: " + country.Population + "\n"
+                            + "Capital" + country.Capital + "\n");
+        }
+
+    }
+
 
 }
 
