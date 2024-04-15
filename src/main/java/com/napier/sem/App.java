@@ -15,16 +15,10 @@ public class App
             a.connect(args[0], Integer.parseInt(args[1]));
         }
 
-
         // getCity function that takes in the cities ID as a parameter and returns all the data
         World cty = a.getCity(373);
-
         // Display results of getCity function using the displayCity function
         a.displayCity(cty);
-
-        // Print print 1st query report
-        a.query1();
-         //Failed to get employee details
 
         // Disconnect from database
         a.disconnect();
@@ -117,10 +111,10 @@ public class App
                 // basically sets all the values from World.swl to the variables alrerdy created in World.java
                 World cty = new World();
                 cty.ID = rset.getInt("ID");
-                cty.Name = rset.getString("Name");
+                cty.CityName = rset.getString("Name");
                 cty.CountryCode = rset.getString("CountryCode");
                 cty.District = rset.getString("District");
-                cty.Population = rset.getInt("Population");
+                cty.CityPopulation = rset.getInt("Population");
                 return cty;
             }
             else
@@ -141,46 +135,13 @@ public class App
             System.out.println( // prints out all the variables from a particular city
                     cty.ID + " "
                             + cty.ID + " "
-                            + cty.Name + "\n"
+                            + cty.CityName + "\n"
                             + cty.CountryCode + "\n"
                             + "District:" + cty.District + "\n"
-                            + cty.Population + "\n");
+                            + cty.CityPopulation + "\n");
         }
     }
 
-    public void query1() { //
-        // Check if the connection is established
-        if (con == null) {
-            System.out.println("Database connection not established. Please try again.");
-            return;
-        }
-
-        try {
-            // Create a statement object
-            Statement stmt = con.createStatement();
-
-            // defines the SQL query
-            String query = "SELECT ID, Name, Population FROM city ORDER BY population DESC LIMIT 4";
-
-            // Execute the query
-            ResultSet rs = stmt.executeQuery(query);
-
-            // Process the result set
-            while (rs.next()) {
-                // Access the columns of the current row
-                //int id = rs.getInt("id");
-                String name = rs.getString("name");
-                // Do something with the retrieved data
-                System.out.println("ID: " + rs.getInt("ID") + ", Name: " + name + ", Population: " + rs.getInt("population"));
-            }
-
-            // Close the result set and statement
-            rs.close();
-            stmt.close();
-        } catch (SQLException e) { // catches the program if there are any errors
-            System.out.println("Error executing SQL query: " + e.getMessage());
-        }
-    }
 }
 
 
