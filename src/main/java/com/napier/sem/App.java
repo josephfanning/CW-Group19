@@ -2,8 +2,9 @@ package com.napier.sem;
 
 import java.sql.*;
 
-public class App
-{
+import java.util.Scanner;
+
+public class App {
     /** creates an instance of app and calls the connect and disconnect function on it*/
     public static void main(String[] args) {
         // Create new Application and connect to database
@@ -15,16 +16,39 @@ public class App
             a.connect(args[0], Integer.parseInt(args[1]));
         }
 
-        // getCity function that takes in the cities ID as a parameter and returns all the data
-        World cty = a.getCity(373);
-        // Display results of getCity function using the displayCity function
-        a.displayCity(cty);
+        // Menu
+        Scanner scanner = new Scanner(System.in);
+        int choice = 0;
+        while (choice != 3) {
+            System.out.println("Menu:");
+            System.out.println("1. Get City");
+            System.out.println("2. Get Country");
+            System.out.println("3. Exit");
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
 
-        World country = a.getCountry("BLR");
-        a.displayCountry(country);
+            switch (choice) {
+                case 1:
+                    // Get City
+                    World city = a.getCity(373);
+                    a.displayCity(city);
+                    break;
+                case 2:
+                    // Get Country
+                    World country = a.getCountry("BLR");
+                    a.displayCountry(country);
+                    break;
+                case 3:
+                    // Exit
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please enter a valid option.");
+            }
+        }
 
         // Disconnect from database
         a.disconnect();
+        scanner.close();
     }
 
     /**
@@ -200,8 +224,4 @@ public class App
         }
 
     }
-
-
 }
-
-
