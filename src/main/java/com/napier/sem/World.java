@@ -20,6 +20,9 @@ public class World {
 
             // country stuff
 
+    public String CountryName;
+
+
     public String Code;
 
     public String Continent;

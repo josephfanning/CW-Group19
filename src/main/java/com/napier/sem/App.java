@@ -23,7 +23,8 @@ public class App {
             System.out.println("Menu:");
             System.out.println("1. Get City");
             System.out.println("2. Get Country");
-            System.out.println("3. Exit");
+            System.out.println("3. Get Capital");
+            System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
 
@@ -39,6 +40,11 @@ public class App {
                     a.displayCountry(country);
                     break;
                 case 3:
+                    // get capital
+//                    World capital = a.getCapitalCity(1);
+//                    a.displayCapital(capital);
+                    System.out.println("yet to be implemented!");
+                case 4:
                     // Exit
                     break;
                 default:
@@ -224,4 +230,73 @@ public class App {
         }
 
     }
+
+//    public World getCapitalCity(int cityId) {
+//        try {
+//            // Create an SQL statement for retrieving city information
+//            String cityQuery = "SELECT Name AS CityName, CountryCode, Population FROM city WHERE ID = " + cityId;
+//
+//            // Execute city query
+//            ResultSet cityResult = con.createStatement().executeQuery(cityQuery);
+//
+//            // Create a World object to store the capital city information
+//            World capitalCity = new World();
+//
+//            // Retrieve city information
+//            if (cityResult.next()) {
+//                capitalCity.Name = cityResult.getString("CityName");
+//                capitalCity.CountryCode = cityResult.getString("CountryCode");
+//                capitalCity.Population = cityResult.getInt("Population");
+//            } else {
+//                // If city not found, return null
+//                return null;
+//            }
+//
+//            // Close the city result set
+//            cityResult.close();
+//
+//            // Create an SQL statement for retrieving country name
+//            String countryQuery = "SELECT Name AS CountryName FROM country WHERE Code = '" + capitalCity.CountryCode + "'";
+//
+//            // Execute country query
+//            ResultSet countryResult = con.createStatement().executeQuery(countryQuery);
+//
+//            // Retrieve country name
+//            if (countryResult.next()) {
+//                capitalCity.CountryName = countryResult.getString("CountryName");
+//            } else {
+//                // If country not found, return null
+//                return null;
+//            }
+//
+//            // Close the country result set
+//            countryResult.close();
+//
+//            // Return the capital city
+//            return capitalCity;
+//
+//        } catch (Exception e) {
+//            System.out.println(e.getMessage());
+//            System.out.println("Failed to get capital city details");
+//            return null; // If an exception occurs
+//        }
+//    }
+//
+//    public void displayCapital(World capitalCity) {
+//        if (capitalCity != null) {
+//            System.out.println("Capital City Report:");
+//            System.out.println("City Name: " + capitalCity.Name);
+//            System.out.println("Country Name: " + capitalCity.Name);
+//            System.out.println("Population: " + capitalCity.Population);
+//        } else {
+//            System.out.println("Capital city not found.");
+//        }
+//    }
+
+
+
+
+
+
+
 }
