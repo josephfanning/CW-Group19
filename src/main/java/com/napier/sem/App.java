@@ -16,8 +16,24 @@ public class App {
             a.connect(args[0], Integer.parseInt(args[1]));
         }
 
+        System.out.println("City Report: \n");
         World city = a.getCity(373);
         a.displayCity(city);
+        System.out.println("\n\n");
+
+        // Get Country
+        System.out.println("Country Report: \n");
+        World country = a.getCountry("BLR");
+        a.displayCountry(country);
+        System.out.println("\n\n");
+
+        // get Capital
+        System.out.println("Capital City Report: \n");
+        World capital = a.getCapitalCity(1);
+        a.displayCapital(capital);
+        System.out.println("\n\n");
+
+        // MENU - DOESNT WORK ON GITHUB ACTIONS WHEN DEPLOYING
 //
 //        // Menu
 //        Scanner scanner = new Scanner(System.in);
