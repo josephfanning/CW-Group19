@@ -250,6 +250,7 @@ public class App {
 
     }
 
+    // will probs have to change the World.java file to use .this instances
     public World getCapitalCity(int cityId) {
         try {
             // Create an SQL statement for retrieving city information
@@ -303,7 +304,6 @@ public class App {
 
     public void displayCapital(World capitalCity) {
         if (capitalCity != null) {
-            System.out.println("Capital City Report:");
             System.out.println("City Name: " + capitalCity.Name);
             System.out.println("Country Name: " + capitalCity.Name);
             System.out.println("Population: " + capitalCity.Population);
@@ -311,11 +311,4 @@ public class App {
             System.out.println("Capital city not found.");
         }
     }
-
-
-
-
-
-
-
 }
