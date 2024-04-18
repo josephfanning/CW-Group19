@@ -66,7 +66,7 @@ public class AppIntegrationTest
     void testGetPopFromCountry() // basic code to get the Population from the country table
     {
         World testGetPopFromCountry = app.getCountry("MEX");
-        assertEquals("Mexico", testGetPopFromCountry.Population);
+        assertEquals(98881000, testGetPopFromCountry.Population);
     }
 
     @Test
