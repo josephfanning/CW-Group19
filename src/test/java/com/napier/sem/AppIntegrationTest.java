@@ -39,7 +39,7 @@ public class AppIntegrationTest
     }
 
     @Test
-    void testGetDistrict() // basid code to get the District from the database
+    void testGetDistrict() // basic code to get the District from the database
     {
         World testGetDistrict = app.getCity(871);
         assertEquals("Southern Mindanao", testGetDistrict.District);
