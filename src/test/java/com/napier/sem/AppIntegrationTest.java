@@ -55,5 +55,26 @@ public class AppIntegrationTest
         assertEquals(752037, testGetAllInfo.Population);
     }
 
+    @Test
+    void testGetCodeFromCountry()  // basic code to get the countryCode from the country table
+    {
+        World testGetCountryCode = app.getCountry("ARG");
+        assertEquals("Argentina", testGetCountryCode.Name);
+    }
+
+    @Test
+    void testGetPopFromCountry() // basic code to get the Population from the country table
+    {
+        World testGetPopFromCountry = app.getCountry("MEX");
+        assertEquals("Mexico", testGetPopFromCountry.Population);
+    }
+
+    @Test
+    void testGetCapitalFromCountry() // basic code to get the capital from the country
+    {
+        World testGetRegion = app.getCountry("CHN");
+        assertEquals(1891, testGetRegion.Capital);
+    }
+
 
 }
