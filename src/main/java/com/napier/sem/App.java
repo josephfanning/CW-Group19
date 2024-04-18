@@ -16,18 +16,19 @@ public class App {
             a.connect(args[0], Integer.parseInt(args[1]));
         }
 
+        // prints a basic city report based on a predefined id
         System.out.println("City Report: \n");
         World city = a.getCity(373);
         a.displayCity(city);
         System.out.println("\n\n");
 
-        // Get Country
+        // prints a basic city report based on a predefined country code
         System.out.println("Country Report: \n");
         World country = a.getCountry("BLR");
         a.displayCountry(country);
         System.out.println("\n\n");
 
-        // get Capital
+        // prints a basic capital city report based on a predefined id *NOTE currently has issues with displaying the country name, soon to be fixed
         System.out.println("Capital City Report: \n");
         World capital = a.getCapitalCity(1);
         a.displayCapital(capital);
@@ -250,6 +251,7 @@ public class App {
 
     }
 
+    // will probs have to change the World.java file to use .this instances
     public World getCapitalCity(int cityId) {
         try {
             // Create an SQL statement for retrieving city information
@@ -303,7 +305,6 @@ public class App {
 
     public void displayCapital(World capitalCity) {
         if (capitalCity != null) {
-            System.out.println("Capital City Report:");
             System.out.println("City Name: " + capitalCity.Name);
             System.out.println("Country Name: " + capitalCity.Name);
             System.out.println("Population: " + capitalCity.Population);
@@ -311,11 +312,4 @@ public class App {
             System.out.println("Capital city not found.");
         }
     }
-
-
-
-
-
-
-
 }
