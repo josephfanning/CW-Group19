@@ -16,45 +16,48 @@ public class App {
             a.connect(args[0], Integer.parseInt(args[1]));
         }
 
-        // Menu
-        Scanner scanner = new Scanner(System.in);
-        int choice = 0;
-        while (choice != 3) {
-            System.out.println("Menu:");
-            System.out.println("1. Get City");
-            System.out.println("2. Get Country");
-            System.out.println("3. Get Capital");
-            System.out.println("4. Exit");
-            System.out.print("Enter your choice: ");
-            choice = scanner.nextInt();
-
-            switch (choice) {
-                case 1:
-                    // Get City
-                    World city = a.getCity(373);
-                    a.displayCity(city);
-                    break;
-                case 2:
-                    // Get Country
-                    World country = a.getCountry("BLR");
-                    a.displayCountry(country);
-                    break;
-                case 3:
-                    // get capital
-                    World capital = a.getCapitalCity(1);
-                    a.displayCapital(capital);
-                    System.out.println("yet to be implemented!");
-                case 4:
-                    // Exit
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please enter a valid option.");
-            }
-        }
+        World city = a.getCity(373);
+        a.displayCity(city);
+//
+//        // Menu
+//        Scanner scanner = new Scanner(System.in);
+//        int choice = 0;
+//        while (choice != 3) {
+//            System.out.println("Menu:");
+//            System.out.println("1. Get City");
+//            System.out.println("2. Get Country");
+//            System.out.println("3. Get Capital");
+//            System.out.println("4. Exit");
+//            System.out.print("Enter your choice: ");
+//            choice = scanner.nextInt();
+//
+//            switch (choice) {
+//                case 1:
+//                    // Get City
+//                    World city = a.getCity(373);
+//                    a.displayCity(city);
+//                    break;
+//                case 2:
+//                    // Get Country
+//                    World country = a.getCountry("BLR");
+//                    a.displayCountry(country);
+//                    break;
+//                case 3:
+//                    // get capital
+//                    World capital = a.getCapitalCity(1);
+//                    a.displayCapital(capital);
+//                    System.out.println("yet to be implemented!");
+//                case 4:
+//                    // Exit
+//                    break;
+//                default:
+//                    System.out.println("Invalid choice. Please enter a valid option.");
+//            }
+//        }
 
         // Disconnect from database
         a.disconnect();
-        scanner.close();
+        //scanner.close();
     }
 
     /**
