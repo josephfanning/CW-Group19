@@ -52,11 +52,32 @@ public class App {
             System.out.println("Country: " + c.Name + ", Population: " + c.Population);
         }
 
+        List<World> citiesByPopulation = a.q7();
+        System.out.println("\n\n\nQUERY 7 - Cities by Population:");
+        for (World c : citiesByPopulation) {
+            System.out.println("Name: " + c.Name + ", Population: " + c.Population);
+        }
+
+        List<World> citiesByContinent = a.q8();
+        System.out.println("\n\n\nQUERY 8 - Cities by Continent (Asia):");
+        for (World c : citiesByContinent) {
+            System.out.println("Name: " + c.Name + ", Population: " + c.Population);
+        }
+
+        List<World> citiesByRegion = a.q9();
+        System.out.println("\n\n\nQUERY 9 - Cities by Region (Caribbean):");
+        for (World c : citiesByRegion) {
+            System.out.println("Name: " + c.Name + ", Population: " + c.Population);
+        }
+
         /***
          * QUERIES COMPLETED:
          * Query 1 - All the countries in the world organised by largest population to smallest.
          * Query 2 - All the countries in a continent organised by largest population to smallest.
          * Query 3 - All the countries in a region organised by largest population to smallest.
+         * Query 7 - All the cities in the world organised by largest population to smallest.
+         * Query 8 - All the cities in a continent organised by largest population to smallest.
+         * Query 9 - All the cities in a region organised by largest population to smallest.
          */
 
         // Disconnect from database
@@ -393,5 +414,111 @@ public class App {
         }
 
         return caribbeanCountries;
+    }
+
+    /***
+     * Query 7
+     * @return citiesByPopulation
+     */
+    public List<World> q7() {
+        List<World> citiesByPopulation = new ArrayList<>();
+
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT Name, Population "
+                            + "FROM city "
+                            + "ORDER BY Population DESC";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Process the result set
+            while (rset.next()) {
+                World city = new World();
+                city.Name = rset.getString("Name");
+                city.Population = rset.getInt("Population");
+                citiesByPopulation.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get countries by population");
+        }
+
+        return citiesByPopulation;
+    }
+
+    /***
+     * Query 8
+     * @return CitiesByContinent
+     */
+    public List<World> q8() {
+        List<World> citiesByContinent = new ArrayList<>();
+
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.Name, city.Population " +
+                            "FROM city " +
+                            "JOIN country ON city.CountryCode = country.Code " +
+                            "WHERE country.Continent = 'Asia' " +
+                            "ORDER BY city.Population DESC";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Process the result set
+            while (rset.next()) {
+                World city = new World();
+                city.Name = rset.getString("Name");
+                city.Population = rset.getInt("Population");
+                citiesByContinent.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get countries by population");
+        }
+
+        return citiesByContinent;
+    }
+
+    /***
+     * Query 9
+     * @return citiesByRegion
+     */
+    public List<World> q9() {
+        List<World> citiesByRegion = new ArrayList<>();
+
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT city.Name, city.Population " +
+                            "FROM city " +
+                            "JOIN country ON city.CountryCode = country.Code " +
+                            "WHERE country.Region = 'Caribbean' " +
+                            "ORDER BY city.Population DESC";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Process the result set
+            while (rset.next()) {
+                World city = new World();
+                city.Name = rset.getString("Name");
+                city.Population = rset.getInt("Population");
+                citiesByRegion.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get countries by population");
+        }
+
+        return citiesByRegion;
     }
 }
