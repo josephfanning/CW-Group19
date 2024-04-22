@@ -65,13 +65,13 @@ Testing **build badges**
     <td>8</td>
     <td>All the cities in a continent organised by largest population to smallest.</td>
     <td>YES</td>
-    <td></td>
+    <td>(https://github.com/josephfanning/CW-Group19/blob/master/Query8.png)</td>
   </tr>
       <tr>
     <td>9</td>
     <td>All the cities in a region organised by largest population to smallest.</td>
     <td>YES</td>
-    <td></td>
+    <td>(https://github.com/josephfanning/CW-Group19/blob/master/Query9.png)</td>
   </tr>
       <tr>
     <td>10</td>
