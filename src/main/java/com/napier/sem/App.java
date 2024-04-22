@@ -147,7 +147,11 @@ public class App {
         }
     }
 
-    // testing function from lab3 to get a city and all its details
+    /***
+     * gets city report
+     * @param id
+     * @return cty
+     */
     public World getCity(int id)
     {
         try
@@ -187,6 +191,10 @@ public class App {
         }
     }
 
+    /***
+     * displays city report
+     * @param cty
+     */
     public void displayCity(World cty) // method to display
     {
         if (cty != null)
@@ -201,6 +209,11 @@ public class App {
         }
     }
 
+    /***
+     * gets country report
+     * @param Code
+     * @return country
+     */
     public World getCountry(String Code)
     {
         try
@@ -241,6 +254,10 @@ public class App {
         }
     }
 
+    /***
+     * displays country report
+     * @param country
+     */
     public void displayCountry(World country)
     {
         if (country != null)
@@ -257,6 +274,11 @@ public class App {
 
     }
 
+    /***
+     * gets the capital city report
+     * @param cityId
+     * @return capital city
+     */
     public World getCapitalCity(int cityId) {
         try {
             // Create an SQL statement for retrieving city information
@@ -308,6 +330,10 @@ public class App {
         }
     }
 
+    /***
+     * display capital city report
+     * @param capitalCity
+     */
     public void displayCapital(World capitalCity) {
         if (capitalCity != null) {
             System.out.println("Capital City Report:");
@@ -318,6 +344,11 @@ public class App {
             System.out.println("Capital city not found.");
         }
     }
+
+    /***
+     * query 1 - get all countries by population from highest to lowest
+     * @return countries
+     */
     public List<World> getCountriesByPopulation() {
         List<World> countries = new ArrayList<>();
 
@@ -348,10 +379,4 @@ public class App {
 
         return countries;
     }
-
-
-
-
-
-
 }
