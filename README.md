@@ -10,7 +10,7 @@ Testing **build badges**
 
 <br></br>
 
-<p> requirments of the 32 were met, which is % </p>
+<p>6 requirments of the 32 were met, which is 18.75%. </p>
 <table>
   <tr>
     <th>ID</th>
@@ -40,19 +40,19 @@ Testing **build badges**
     <tr>
     <td>4</td>
     <td>The top N populated countries in the world where N is provided by the user.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
     <tr>
     <td>5</td>
     <td>The top N populated countries in a continent where N is provided by the user.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
     <tr>
     <td>6</td>
     <td>The top N populated countries in a region where N is provided by the user.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
     <tr>
@@ -76,13 +76,13 @@ Testing **build badges**
       <tr>
     <td>10</td>
     <td>All the cities in a country organised by largest population to smallest.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
         <tr>
     <td>11</td>
     <td>All the cities in a district organised by largest population to smallest.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
         <tr>
@@ -94,121 +94,121 @@ Testing **build badges**
         <tr>
     <td>13</td>
     <td>The top N populated cities in a continent where N is provided by the user.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
         <tr>
     <td>14</td>
     <td>The top N populated cities in a region where N is provided by the user.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
         <tr>
     <td>15</td>
     <td>The top N populated cities in a country where N is provided by the user.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>16</td>
     <td>The top N populated cities in a district where N is provided by the user.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>17</td>
     <td>All the capital cities in the world organised by largest population to smallest.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
       <tr>
     <td>18</td>
     <td>All the capital cities in a continent organised by largest population to smallest.</td>
-    <td></td>
-    <td></td>
+    <td>NO</td>
+    <td>NO</td>
   </tr>
       <tr>
     <td>19</td>
     <td>All the capital cities in a region organised by largest to smallest.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
      <tr>
     <td>20</td>
     <td>The top N populated capital cities in the world where N is provided by the user.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>21</td>
     <td>The top N populated capital cities in a continent where N is provided by the user.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>22</td>
     <td>The top N populated capital cities in a region where N is provided by the user.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>23</td>
     <td>The population of people, people living in cities, and people not living in cities in each continent.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>24</td>
     <td>The population of people, people living in cities, and people not living in cities in each region</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
      <tr>
     <td>25</td>
     <td>The population of people, people living in cities, and people not living in cities in each country.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>26</td>
     <td>The population of the world.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>27</td>
     <td>The population of a continent.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>28</td>
     <td>The population of a region.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>29</td>
     <td>The population of a country.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>30</td>
     <td>The population of a district.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>31</td>
     <td>The population of a city.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
        <tr>
     <td>32</td>
-    <td></td>
-    <td></td>
+    <td>Languages from largest to smallest</td>
+    <td>NO</td>
     <td></td>
   </tr>
   
