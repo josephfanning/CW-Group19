@@ -58,19 +58,19 @@ Testing **build badges**
     <tr>
     <td>7</td>
     <td>All the cities in the world organised by largest population to smallest.</td>
-    <td></td>
-    <td></td>
+    <td>YES</td>
+    <td>(https://github.com/josephfanning/CW-Group19/blob/master/Query7.png)</td>
   </tr>
       <tr>
     <td>8</td>
     <td>All the cities in a continent organised by largest population to smallest.</td>
-    <td></td>
+    <td>YES</td>
     <td></td>
   </tr>
       <tr>
     <td>9</td>
     <td>All the cities in a region organised by largest population to smallest.</td>
-    <td></td>
+    <td>YES</td>
     <td></td>
   </tr>
       <tr>
