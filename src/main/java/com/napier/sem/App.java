@@ -34,18 +34,23 @@ public class App {
         a.displayCapital(capital);
         System.out.println("\n\n");
 
-        List<World> countriesByPopulation = a.getCountriesByPopulation();
-        System.out.println("Countries by Population:");
+        List<World> countriesByPopulation = a.q1();
+        System.out.println("QUERY 1 - Countries by Population:");
         for (World c : countriesByPopulation) {
             System.out.println("Country: " + c.Name + ", Population: " + country.Population);
         }
 
-        List<World> CitiesByPopulation = a.getCitiesByPopulation();
-        System.out.println("\n\n\n\n\nCities by Population:");
-        for (World c : CitiesByPopulation) {
-            System.out.println("City: " + c.Name + ", Population: " + city.Population);
+        List<World> europeCountriesByPopulation = a.q2();
+        System.out.println("QUERY 2 - European Countries by Population:");
+        for (World c : europeCountriesByPopulation) {
+            System.out.println("Country: " + c.Name + ", Population: " + c.Population);
         }
 
+        List<World> caribbeanCountriesByPopulation = a.q3();
+        System.out.println("QUERY 3 - Caribbean Countries by Population:");
+        for (World c : caribbeanCountriesByPopulation) {
+            System.out.println("Country: " + c.Name + ", Population: " + c.Population);
+        }
         // MENU - DOESNT WORK ON GITHUB ACTIONS WHEN DEPLOYING
 //
 //        // Menu
@@ -153,11 +158,7 @@ public class App {
         }
     }
 
-    /***
-     * gets city report
-     * @param id
-     * @return cty
-     */
+    // testing function from lab3 to get a city and all its details
     public World getCity(int id)
     {
         try
@@ -197,10 +198,6 @@ public class App {
         }
     }
 
-    /***
-     * displays city report
-     * @param cty
-     */
     public void displayCity(World cty) // method to display
     {
         if (cty != null)
@@ -215,11 +212,6 @@ public class App {
         }
     }
 
-    /***
-     * gets country report
-     * @param Code
-     * @return country
-     */
     public World getCountry(String Code)
     {
         try
@@ -260,10 +252,6 @@ public class App {
         }
     }
 
-    /***
-     * displays country report
-     * @param country
-     */
     public void displayCountry(World country)
     {
         if (country != null)
@@ -280,11 +268,6 @@ public class App {
 
     }
 
-    /***
-     * gets the capital city report
-     * @param cityId
-     * @return capital city
-     */
     public World getCapitalCity(int cityId) {
         try {
             // Create an SQL statement for retrieving city information
@@ -336,10 +319,6 @@ public class App {
         }
     }
 
-    /***
-     * display capital city report
-     * @param capitalCity
-     */
     public void displayCapital(World capitalCity) {
         if (capitalCity != null) {
             System.out.println("Capital City Report:");
@@ -350,12 +329,7 @@ public class App {
             System.out.println("Capital city not found.");
         }
     }
-
-    /***
-     * query 1 - get all countries by population from highest to lowest
-     * @return countries
-     */
-    public List<World> getCountriesByPopulation() {
+    public List<World> q1() {
         List<World> countries = new ArrayList<>();
 
         try {
@@ -386,34 +360,72 @@ public class App {
         return countries;
     }
 
-    public List<World> getCitiesByPopulation() {
-        List<World> cities = new ArrayList<>();
+    public List<World> q2() {
+        List<World> europeCountries = new ArrayList<>();
 
         try {
             // Create an SQL statement
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "SELECT Name, Population "
-                            + "FROM city "
+                    "SELECT Code, Name, Population "
+                            + "FROM country "
+                            + "WHERE Continent = 'Europe' "
                             + "ORDER BY Population DESC";
 
             // Execute SQL statement
-            ResultSet query2 = stmt.executeQuery(strSelect);
+            ResultSet rset = stmt.executeQuery(strSelect);
 
             // Process the result set
-            while (query2.next()) {
-                World city = new World();
-                city.Name = query2.getString("Name");
-                city.Population = query2.getInt("Population");
-                cities.add(city);
+            while (rset.next()) {
+                World country = new World();
+                country.Code = rset.getString("Code");
+                country.Name = rset.getString("Name");
+                country.Population = rset.getInt("Population");
+                europeCountries.add(country);
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-            System.out.println("Failed to get countries by population");
+            System.out.println("Failed to get European countries by population");
         }
 
-        return cities;
+        return europeCountries;
     }
+
+
+    public List<World> q3() {
+        List<World> caribbeanCountries = new ArrayList<>();
+
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT Code, Name, Population "
+                            + "FROM country "
+                            + "WHERE Region = 'Caribbean' "
+                            + "ORDER BY Population DESC";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Process the result set
+            while (rset.next()) {
+                World country = new World();
+                country.Code = rset.getString("Code");
+                country.Name = rset.getString("Name");
+                country.Population = rset.getInt("Population");
+                caribbeanCountries.add(country);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get Caribbean countries by population");
+        }
+
+        return caribbeanCountries;
+    }
+
+
+
 
 }
