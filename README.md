@@ -88,7 +88,7 @@ Testing **build badges**
         <tr>
     <td>12</td>
     <td>The top N populated cities in the world where N is provided by the user.</td>
-    <td></td>
+    <td>NO</td>
     <td></td>
   </tr>
         <tr>
@@ -125,7 +125,7 @@ Testing **build badges**
     <td>18</td>
     <td>All the capital cities in a continent organised by largest population to smallest.</td>
     <td>NO</td>
-    <td>NO</td>
+    <td></td>
   </tr>
       <tr>
     <td>19</td>
