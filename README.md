@@ -23,19 +23,19 @@ Testing **build badges**
     <td>1</td>
     <td>All the countries in the world organised by largest population to smallest.</td>
     <td>YES</td>
-    <td></td>
+    <td>![q1](https://github.com/josephfanning/CW-Group19/assets/158492535/36aca3d7-4a00-4a75-ab25-53c8ab976512)</td>
   </tr>
   <tr>
     <td>2</td>
     <td>All the countries in a continent organised by largest population to smallest.</td>
     <td>YES</td>
-    <td></td>
+    <td>![q2](https://github.com/josephfanning/CW-Group19/assets/158492535/3df8329c-fba9-4883-bb71-19c943f000ff)</td>
   </tr>
     <tr>
     <td>3</td>
     <td>All the countries in a region organised by largest population to smallest.</td>
     <td>YES</td>
-    <td></td>
+    <td>![q3](https://github.com/josephfanning/CW-Group19/assets/158492535/a8bc74ac-f2c3-4763-898a-449bf5d5a721)</td>
   </tr>
     <tr>
     <td>4</td>
