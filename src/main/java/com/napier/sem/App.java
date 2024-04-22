@@ -1,7 +1,8 @@
 package com.napier.sem;
 
 import java.sql.*;
-
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
@@ -32,6 +33,12 @@ public class App {
         World capital = a.getCapitalCity(1);
         a.displayCapital(capital);
         System.out.println("\n\n");
+
+        List<World> countriesByPopulation = a.getCountriesByPopulation();
+        System.out.println("Countries by Population:");
+        for (World c : countriesByPopulation) {
+            System.out.println("Country: " + c.Name + ", Population: " + country.Population);
+        }
 
         // MENU - DOESNT WORK ON GITHUB ACTIONS WHEN DEPLOYING
 //
@@ -311,7 +318,36 @@ public class App {
             System.out.println("Capital city not found.");
         }
     }
+    public List<World> getCountriesByPopulation() {
+        List<World> countries = new ArrayList<>();
 
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT Code, Name, Population "
+                            + "FROM country "
+                            + "ORDER BY Population DESC";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Process the result set
+            while (rset.next()) {
+                World country = new World();
+                country.Code = rset.getString("Code");
+                country.Name = rset.getString("Name");
+                country.Population = rset.getInt("Population");
+                countries.add(country);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get countries by population");
+        }
+
+        return countries;
+    }
 
 
 
