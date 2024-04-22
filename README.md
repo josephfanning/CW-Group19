@@ -117,91 +117,91 @@ Testing **build badges**
   </tr>
        <tr>
     <td>17</td>
-    <td></td>
+    <td>All the capital cities in the world organised by largest population to smallest.</td>
     <td></td>
     <td></td>
   </tr>
       <tr>
     <td>18</td>
-    <td></td>
+    <td>All the capital cities in a continent organised by largest population to smallest.</td>
     <td></td>
     <td></td>
   </tr>
       <tr>
     <td>19</td>
-    <td></td>
+    <td>All the capital cities in a region organised by largest to smallest.</td>
     <td></td>
     <td></td>
   </tr>
      <tr>
     <td>20</td>
-    <td></td>
+    <td>The top N populated capital cities in the world where N is provided by the user.</td>
     <td></td>
     <td></td>
   </tr>
        <tr>
     <td>21</td>
-    <td></td>
+    <td>The top N populated capital cities in a continent where N is provided by the user.</td>
     <td></td>
     <td></td>
   </tr>
        <tr>
     <td>22</td>
-    <td></td>
+    <td>The top N populated capital cities in a region where N is provided by the user.</td>
     <td></td>
     <td></td>
   </tr>
        <tr>
     <td>23</td>
-    <td></td>
+    <td>The population of people, people living in cities, and people not living in cities in each continent.</td>
     <td></td>
     <td></td>
   </tr>
        <tr>
     <td>24</td>
-    <td></td>
+    <td>The population of people, people living in cities, and people not living in cities in each region</td>
     <td></td>
     <td></td>
   </tr>
      <tr>
     <td>25</td>
-    <td></td>
+    <td>The population of people, people living in cities, and people not living in cities in each country.</td>
     <td></td>
     <td></td>
   </tr>
        <tr>
     <td>26</td>
-    <td></td>
+    <td>The population of the world.</td>
     <td></td>
     <td></td>
   </tr>
        <tr>
     <td>27</td>
-    <td></td>
+    <td>The population of a continent.</td>
     <td></td>
     <td></td>
   </tr>
        <tr>
     <td>28</td>
-    <td></td>
+    <td>The population of a region.</td>
     <td></td>
     <td></td>
   </tr>
        <tr>
     <td>29</td>
-    <td></td>
+    <td>The population of a country.</td>
     <td></td>
     <td></td>
   </tr>
        <tr>
     <td>30</td>
-    <td></td>
+    <td>The population of a district.</td>
     <td></td>
     <td></td>
   </tr>
        <tr>
     <td>31</td>
-    <td></td>
+    <td>The population of a city.</td>
     <td></td>
     <td></td>
   </tr>
