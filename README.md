@@ -22,96 +22,96 @@ Testing **build badges**
   <tr>
     <td>1</td>
     <td>All the countries in the world organised by largest population to smallest.</td>
-    <td>Yes</td>
+    <td>YES</td>
     <td></td>
   </tr>
   <tr>
     <td>2</td>
     <td>All the countries in a continent organised by largest population to smallest.</td>
-    <td>Yes</td>
+    <td>YES</td>
     <td></td>
   </tr>
     <tr>
     <td>3</td>
     <td>All the countries in a region organised by largest population to smallest.</td>
-    <td>Yes</td>
+    <td>YES</td>
     <td></td>
   </tr>
     <tr>
     <td>4</td>
-    <td></td>
+    <td>The top N populated countries in the world where N is provided by the user.</td>
     <td></td>
     <td></td>
   </tr>
     <tr>
     <td>5</td>
-    <td></td>
+    <td>The top N populated countries in a continent where N is provided by the user.</td>
     <td></td>
     <td></td>
   </tr>
     <tr>
     <td>6</td>
-    <td></td>
+    <td>The top N populated countries in a region where N is provided by the user.</td>
     <td></td>
     <td></td>
   </tr>
     <tr>
     <td>7</td>
-    <td></td>
+    <td>All the cities in the world organised by largest population to smallest.</td>
     <td></td>
     <td></td>
   </tr>
       <tr>
     <td>8</td>
-    <td></td>
+    <td>All the cities in a continent organised by largest population to smallest.</td>
     <td></td>
     <td></td>
   </tr>
       <tr>
     <td>9</td>
-    <td></td>
+    <td>All the cities in a region organised by largest population to smallest.</td>
     <td></td>
     <td></td>
   </tr>
       <tr>
     <td>10</td>
-    <td></td>
+    <td>All the cities in a country organised by largest population to smallest.</td>
     <td></td>
     <td></td>
   </tr>
         <tr>
     <td>11</td>
-    <td></td>
+    <td>All the cities in a district organised by largest population to smallest.</td>
     <td></td>
     <td></td>
   </tr>
         <tr>
     <td>12</td>
-    <td></td>
+    <td>The top N populated cities in the world where N is provided by the user.</td>
     <td></td>
     <td></td>
   </tr>
         <tr>
     <td>13</td>
-    <td></td>
+    <td>The top N populated cities in a continent where N is provided by the user.</td>
     <td></td>
     <td></td>
   </tr>
         <tr>
     <td>14</td>
-    <td></td>
+    <td>The top N populated cities in a region where N is provided by the user.</td>
     <td></td>
     <td></td>
   </tr>
         <tr>
     <td>15</td>
-    <td></td>
+    <td>The top N populated cities in a country where N is provided by the user.</td>
     <td></td>
     <td></td>
   </tr>
        <tr>
     <td>16</td>
-    <td></td>
+    <td>The top N populated cities in a district where N is provided by the user.</td>
     <td></td>
     <td></td>
   </tr>
