@@ -22,19 +22,19 @@ Testing **build badges**
   <tr>
     <td>1</td>
     <td>All the countries in the world organised by largest population to smallest.</td>
-    <td></td>
+    <td>Yes</td>
     <td></td>
   </tr>
   <tr>
     <td>2</td>
     <td>All the countries in a continent organised by largest population to smallest.</td>
-    <td></td>
+    <td>Yes</td>
     <td></td>
   </tr>
     <tr>
     <td>3</td>
     <td>All the countries in a region organised by largest population to smallest.</td>
-    <td></td>
+    <td>Yes</td>
     <td></td>
   </tr>
     <tr>
