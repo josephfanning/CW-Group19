@@ -40,6 +40,12 @@ public class App {
             System.out.println("Country: " + c.Name + ", Population: " + country.Population);
         }
 
+        List<World> CitiesByPopulation = a.getCitiesByPopulation();
+        System.out.println("\n\n\n\n\nCities by Population:");
+        for (World c : CitiesByPopulation) {
+            System.out.println("City: " + c.Name + ", Population: " + city.Population);
+        }
+
         // MENU - DOESNT WORK ON GITHUB ACTIONS WHEN DEPLOYING
 //
 //        // Menu
@@ -379,4 +385,35 @@ public class App {
 
         return countries;
     }
+
+    public List<World> getCitiesByPopulation() {
+        List<World> cities = new ArrayList<>();
+
+        try {
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+            // Create string for SQL statement
+            String strSelect =
+                    "SELECT Name, Population "
+                            + "FROM city "
+                            + "ORDER BY Population DESC";
+
+            // Execute SQL statement
+            ResultSet query2 = stmt.executeQuery(strSelect);
+
+            // Process the result set
+            while (query2.next()) {
+                World city = new World();
+                city.Name = query2.getString("Name");
+                city.Population = query2.getInt("Population");
+                cities.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Failed to get countries by population");
+        }
+
+        return cities;
+    }
+
 }
